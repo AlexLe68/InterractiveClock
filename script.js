@@ -82,10 +82,7 @@ function draggableClock(hand){
         active = false
     })
     document.addEventListener("mousemove", e=>{
-        let mX = e.clientX
-        let mY = e.clientY
-        let x = mX - center.x
-        let y = mY - center.y
+       
         //console.log("mX: ", mX, ", mY: ",mY)
         if(active){
             let angle = Math.floor(Math.atan2(y,x) * radians)
