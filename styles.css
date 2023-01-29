@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.clock .number {
+    position: absolute;
+    text-align: center;
+    z-index: 50;
+}
+/*
+.clock #one {top: 19px;left: 70px;}
+.clock #two {top: 70px;left: 121px;}
+.clock #three {top: 140px;left: 140px;}
+.clock #four {top: 210px;left: 121px;}
+.clock #five {top: 261px;left: 70px;}
+.clock #six {top: 280px;left: 0px;}
+.clock #eleven {top: 19px;right: 70px;}
+.clock #ten {top: 70px;right: 121px;}
+.clock #nine {top: 140px;right: 140px;}
+.clock #eight {top: 210px;right: 121px;}
+.clock #seven {top: 261px;right: 70px;}
+.clock #twelve {top: 0px;right: 0px;}
+*/
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    border: 0.5px solid white ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+body { 
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+.clock #hour{
+    width:5px;
+    height: 30%;
+    z-index: 50;
+}
+.clock #minute{
+    width: 3px;
+    height: 48%;
+    z-index: 30;
+    --rotation: 0
+}
+.clock #second{
+    width: 2px;
+    height: 40%;
+    z-index: 10;
+    --rotation:0;
+    background-color: red;
+}
+#center {
+    top: 143px;
+    left: 144px;
+    width: 10px;
+    height: 10px;
+    background-color:black;
+    position: relative;
+    z-index: 60;
+    border-radius: 100%;
+}
+button{
+    position: absolute;
+    cursor: pointer;
+}
