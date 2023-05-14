@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "InterractiveClock",
+    "description": "Add a custom backgorund to Google.com",
+    "version": "1.0",
+    "icons":{
+        "16": "icons/clock16.png",
+        "48": "icons/clock48.png",
+        "128": "icons/clock128.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "icons/clock16.png",
+            "48": "icons/clock48.png",
+            "128": "icons/clock128.png"
+        },
+        "default_popup": "index.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}
